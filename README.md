@@ -31,3 +31,12 @@
         切换到已经关联仓库的本地文件夹
         git pull
     ```
+
++ 合并仓库并提交
+    ```
+        git pull origin master //GitHub的仓库存在文件需要合并
+        git push -u origin master
+
+        使用git pull origin master 命令操作时，会遇到这样的错误：fatal: refusing to merge unrelated histories。
+        这是因为远程仓库已经存在代码记录了(例如markdown文件)，并且那部分代码没有和本地仓库进行关联，我们可以使用如下操作允许pull未关联的远程仓库旧代码：git pull origin master --allow-unrelated-histories
+    ```
