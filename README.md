@@ -121,3 +121,40 @@
 
         　　git reset --hard ORIG_HEAD
     ```
++ 版本记录
+    + 显示详细日志信息
+        ```
+            git log
+        ```
+    + 每条日志显示一行信息
+        ```
+            git log --pretty=oneline
+        ```
+    + 显示回退到该版本的步数
+        ```
+            git reflog
+        ```
+
+    + 回滚版本
+        + 哈希值回滚
+            ```
+                git reset --hard <哈希值/索引>
+                通过reflog查询哈希值
+            ```
+        + 异或回滚(只能后退)
+            ```
+                git reset --hard HEAD^^ (^个数为回滚步数)
+            ```
+        + ~回滚(只能后退)
+            ```
+                git reset --hard HEAD~n (n数值为回滚步数)
+            ```
++ 差异对比
+    + 将工作区与暂存区文件进行对比
+        ```
+            git diff 文件名
+        ```
+    + 将工作区与历史文件进行对比
+        ```
+            git diff 历史版本哈希值 文件名
+        ```  
